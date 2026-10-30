@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Clarity Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body data-page="dashboard" data-title="Dashboard">
+<main class="content" id="main">
+
+<div class="page-header"><div><h1>Good morning, Alex</h1><p class="muted">Here is your financial overview.</p></div>
+<div class="actions"><span class="chip chip-muted"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Sample preview data</span><label class="sr-only" for="month">Month</label><select id="month" style="width:auto"><option>Oct 2026</option><option>Sep 2026</option><option>Aug 2026</option></select></div></div>
+<section class="grid grid-4" aria-label="Financial summary">
+<article class="card stat"><span class="icon"><i class="fa-solid fa-wallet" aria-hidden="true"></i></span><p class="label">Total Balance</p><p class="value">Rs. 85,450.00</p><span class="chip chip-income"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +12.4% vs last month</span></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i></span><p class="label">Total Income</p><p class="value">Rs. 120,000.00</p><span class="muted small">Salary &amp; Freelance</span></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span><p class="label">Total Expenses</p><p class="value">Rs. 34,550.00</p><span class="chip chip-primary">28% of income</span></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></span><p class="label">Remaining Budget</p><p class="value">Rs. 15,450.00</p><span class="chip chip-income"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Safe margin</span></article>
+</section>
+<section class="grid grid-2">
+<article class="card"><div class="card-head"><h2>Income vs Expenses</h2></div><div class="legend"><span><span class="dot" style="background:var(--primary)"></span>Income</span><span><span class="dot" style="background:var(--expense)"></span>Expenses</span><span>Values in Rs. thousands</span></div>
+<div class="bars" role="img" aria-label="Income vs expenses: Jul 100k and 40k, Aug 110k and 35k, Sep 105k and 38k, Oct 120k and 34.6k">
+<div class="bar-group"><div class="bar in" style="height:83%" title="Income 100k"></div><div class="bar out" style="height:33%" title="Expenses 40k"></div></div><div class="bar-group"><div class="bar in" style="height:91%" title="Income 110k"></div><div class="bar out" style="height:29%" title="Expenses 35k"></div></div><div class="bar-group"><div class="bar in" style="height:87%" title="Income 105k"></div><div class="bar out" style="height:31%" title="Expenses 38k"></div></div><div class="bar-group"><div class="bar in" style="height:100%" title="Income 120k"></div><div class="bar out" style="height:29%" title="Expenses 35k"></div></div></div>
+<div class="bar-labels"><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></article>
+<article class="card"><div class="card-head"><h2>30-Day Spending Trend</h2><span class="muted small">Avg. Rs. 1,151/day</span></div><svg class="line-chart" viewBox="0 0 300 100" preserveAspectRatio="none" role="img" aria-label="Daily spending trend for October">
+<polygon class="area" points="0,100 0,75 30,65 60,80 90,50 120,60 150,25 180,55 210,40 240,65 270,30 300,45 300,100"/>
+<polyline class="line" points="0,75 30,65 60,80 90,50 120,60 150,25 180,55 210,40 240,65 270,30 300,45"/></svg>
+<div class="axis"><span>Oct 01</span><span>Oct 15 (Payday)</span><span>Oct 31</span></div></article>
+</section>
+<section class="grid grid-2">
+<article class="card"><div class="card-head"><h2>Spending by Category</h2><span class="muted small">Rs. 34,550 total</span></div><div class="donut-wrap"><div class="donut" role="img" aria-label="Spending by category" style="background:conic-gradient(#2563eb 0% 38%,#7c3aed 38% 64%,#16a34a 64% 78%,#d97706 78% 90%,#dc2626 90% 100%)"><span>Rs. 34,550<small>spent</small></span></div><ul class="legend-list"><li><span><span class="dot" style="background:#2563eb"></span>Food & Dining</span><strong>38%</strong></li><li><span><span class="dot" style="background:#7c3aed"></span>Housing</span><strong>26%</strong></li><li><span><span class="dot" style="background:#16a34a"></span>Transport</span><strong>14%</strong></li><li><span><span class="dot" style="background:#d97706"></span>Education</span><strong>12%</strong></li><li><span><span class="dot" style="background:#dc2626"></span>Utility Bills</span><strong>10%</strong></li></ul></div></article>
+<article class="card"><div class="card-head"><h2>Budget Health</h2><a class="link" href="budgets.html">View Budgets</a></div><div class="budget-item">
+<div class="budget-top"><span><i class="fa-solid fa-utensils" aria-hidden="true"></i> Food & Dining</span><span class="chip chip-warning"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Warning</span></div>
+<div class="progress warn" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Food &amp; Dining budget used"><span style="width:80%"></span></div>
+<div class="budget-meta"><span>Rs. 12,000.00 spent (80%)</span><span>Limit: Rs. 15,000.00</span></div></div><div class="budget-item">
+<div class="budget-top"><span><i class="fa-solid fa-car" aria-hidden="true"></i> Transportation</span><span class="chip chip-income"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Safe</span></div>
+<div class="progress " role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Transportation budget used"><span style="width:70%"></span></div>
+<div class="budget-meta"><span>Rs. 4,200.00 spent (70%)</span><span>Limit: Rs. 6,000.00</span></div></div><div class="budget-item">
+<div class="budget-top"><span><i class="fa-solid fa-house" aria-hidden="true"></i> Housing & Utilities</span><span class="chip chip-expense"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Over limit</span></div>
+<div class="progress over" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Housing &amp; Utilities budget used"><span style="width:100%"></span></div>
+<div class="budget-meta"><span>Rs. 18,000.00 spent (100%)</span><span>Limit: Rs. 18,000.00</span></div></div></article>
+</section>
+<section class="card"><div class="card-head"><h2>Recent Transactions</h2><a class="link" href="transactions.html">View All Transactions</a></div>
+<div class="table-wrap"><table class="responsive"><thead><tr><th>Description</th><th>Category</th><th>Date</th><th>Payment</th><th>Type</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td data-label="Description">Apex Software Salary</td><td data-label="Category"><span class="chip chip-muted">Salary</span></td><td data-label="Date">2026-10-25</td><td data-label="Payment">Bank Transfer</td><td data-label="Type"><span class="chip chip-income"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Income</span></td><td data-label="Amount" class="amount-in">+ Rs. 120,000.00</td></tr>
+<tr><td data-label="Description">Keells Supermarket</td><td data-label="Category"><span class="chip chip-muted">Food</span></td><td data-label="Date">2026-10-24</td><td data-label="Payment">Card</td><td data-label="Type"><span class="chip chip-expense"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Expense</span></td><td data-label="Amount" class="amount-out">- Rs. 8,450.00</td></tr>
+<tr><td data-label="Description">PickMe Ride</td><td data-label="Category"><span class="chip chip-muted">Transport</span></td><td data-label="Date">2026-10-23</td><td data-label="Payment">Cash</td><td data-label="Type"><span class="chip chip-expense"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Expense</span></td><td data-label="Amount" class="amount-out">- Rs. 1,250.00</td></tr>
+<tr><td data-label="Description">Dialog Home Broadband</td><td data-label="Category"><span class="chip chip-muted">Bills</span></td><td data-label="Date">2026-10-22</td><td data-label="Payment">Online</td><td data-label="Type"><span class="chip chip-expense"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Expense</span></td><td data-label="Amount" class="amount-out">- Rs. 3,850.00</td></tr>
+<tr><td data-label="Description">Java Lounge Cafe</td><td data-label="Category"><span class="chip chip-muted">Food</span></td><td data-label="Date">2026-10-21</td><td data-label="Payment">Card</td><td data-label="Type"><span class="chip chip-expense"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Expense</span></td><td data-label="Amount" class="amount-out">- Rs. 1,600.00</td></tr>
+</tbody></table></div></section>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

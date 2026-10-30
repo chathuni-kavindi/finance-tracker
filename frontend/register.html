@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Clarity Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<main class="auth"><div class="card auth-card">
+<div class="auth-brand"><span class="brand-logo"><i class="fa-solid fa-wallet" aria-hidden="true"></i></span><strong>Clarity Finance</strong></div>
+<h1>Create your account</h1><p class="muted">Start tracking your income and expenses.</p>
+<form id="register-form" novalidate>
+<div class="field"><label for="r-name">Full name <span class="req" aria-hidden="true">*</span></label><input id="r-name" name="name" type="text" required data-error="Please enter your full name." autocomplete="name"><p class="error-text" role="alert"></p></div>
+<div class="field"><label for="r-email">Email <span class="req" aria-hidden="true">*</span></label><input id="r-email" name="email" type="email" required data-error="Please enter your email." autocomplete="email"><p class="error-text" role="alert"></p></div>
+<div class="field"><label for="r-password">Password <span class="req" aria-hidden="true">*</span></label><div class="password-wrap"><input id="r-password" name="password" type="password" required data-error="Please create a password." autocomplete="new-password"><button type="button" class="eye" data-toggle-password aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div><p class="error-text" role="alert"></p></div>
+<ul class="rules" id="rules" aria-label="Password requirements">
+<li data-rule="length"><i class="fa-solid fa-circle"></i> At least 8 characters</li>
+<li data-rule="upper"><i class="fa-solid fa-circle"></i> One uppercase letter</li>
+<li data-rule="number"><i class="fa-solid fa-circle"></i> One number</li></ul>
+<div class="field"><label for="r-confirm">Confirm password <span class="req" aria-hidden="true">*</span></label><div class="password-wrap"><input id="r-confirm" name="confirm" type="password" required data-error="Please confirm your password." data-match="#r-password" autocomplete="new-password"><button type="button" class="eye" data-toggle-password aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div><p class="error-text" role="alert"></p></div>
+<div class="field"><label class="check"><input type="checkbox" id="r-terms" name="terms" required data-error="Please accept the Terms and Privacy Policy."> I agree to the Terms and Privacy Policy</label><p class="error-text" role="alert"></p></div>
+<button class="btn btn-primary btn-block" type="submit">Create account</button>
+</form>
+<div class="alert alert-success" id="register-success" role="status" hidden style="margin-top:20px"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Account created. Taking you to the login page...</span></div>
+<p class="auth-foot">Already have an account? <a href="login.html">Log in</a></p>
+</div></main>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
