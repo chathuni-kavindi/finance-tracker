@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports | Clarity Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body data-page="reports" data-title="Reports">
+<main class="content" id="main">
+
+<div class="page-header"><div><h1>Reports</h1><p class="muted">Understand your spending patterns.</p></div>
+<div class="actions"><span class="chip chip-muted"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Sample preview data</span><label class="sr-only" for="range">Date range</label><select id="range" style="width:auto"><option>This month</option><option>Last 3 months</option><option>This year</option><option>Custom</option></select>
+<button class="btn btn-outline" data-toast="CSV export will work once the backend is ready."><i class="fa-solid fa-download" aria-hidden="true"></i> Export CSV</button></div></div>
+<section class="grid grid-3">
+<article class="card stat"><span class="icon"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></span><p class="label">Total Income</p><p class="value">Rs. 120,000.00</p></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span><p class="label">Total Expenses</p><p class="value">Rs. 34,550.00</p></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span><p class="label">Net Cash Flow</p><p class="value">+ Rs. 85,450.00</p></article>
+</section>
+<section class="grid grid-2">
+<article class="card"><div class="card-head"><h2>Income vs Expenses</h2></div><div class="legend"><span><span class="dot" style="background:var(--primary)"></span>Income</span><span><span class="dot" style="background:var(--expense)"></span>Expenses</span><span>Values in Rs. thousands</span></div>
+<div class="bars" role="img" aria-label="Income vs expenses: Jul 100k and 40k, Aug 110k and 35k, Sep 105k and 38k, Oct 120k and 34.6k">
+<div class="bar-group"><div class="bar in" style="height:83%" title="Income 100k"></div><div class="bar out" style="height:33%" title="Expenses 40k"></div></div><div class="bar-group"><div class="bar in" style="height:91%" title="Income 110k"></div><div class="bar out" style="height:29%" title="Expenses 35k"></div></div><div class="bar-group"><div class="bar in" style="height:87%" title="Income 105k"></div><div class="bar out" style="height:31%" title="Expenses 38k"></div></div><div class="bar-group"><div class="bar in" style="height:100%" title="Income 120k"></div><div class="bar out" style="height:29%" title="Expenses 35k"></div></div></div>
+<div class="bar-labels"><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></article>
+<article class="card"><div class="card-head"><h2>Expense Breakdown</h2></div><div class="donut-wrap"><div class="donut" role="img" aria-label="Spending by category" style="background:conic-gradient(#2563eb 0% 38%,#7c3aed 38% 64%,#16a34a 64% 78%,#d97706 78% 90%,#dc2626 90% 100%)"><span>Rs. 34,550<small>spent</small></span></div><ul class="legend-list"><li><span><span class="dot" style="background:#2563eb"></span>Food & Dining</span><strong>38%</strong></li><li><span><span class="dot" style="background:#7c3aed"></span>Housing</span><strong>26%</strong></li><li><span><span class="dot" style="background:#16a34a"></span>Transport</span><strong>14%</strong></li><li><span><span class="dot" style="background:#d97706"></span>Education</span><strong>12%</strong></li><li><span><span class="dot" style="background:#dc2626"></span>Utility Bills</span><strong>10%</strong></li></ul></div></article>
+</section>
+<section class="grid grid-2">
+<article class="card"><div class="card-head"><h2>Monthly Spending Trend</h2></div><svg class="line-chart" viewBox="0 0 300 100" preserveAspectRatio="none" role="img" aria-label="Daily spending trend for October">
+<polygon class="area" points="0,100 0,75 30,65 60,80 90,50 120,60 150,25 180,55 210,40 240,65 270,30 300,45 300,100"/>
+<polyline class="line" points="0,75 30,65 60,80 90,50 120,60 150,25 180,55 210,40 240,65 270,30 300,45"/></svg>
+<div class="axis"><span>Oct 01</span><span>Oct 15 (Payday)</span><span>Oct 31</span></div></article>
+<article class="card"><div class="card-head"><h2>Highest-Spending Categories</h2></div><ul class="list"><li class="list-item" style="display:block"><div class="budget-top"><span>1. Food & Dining</span><span>Rs. 13,129.00</span></div><div class="progress" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" aria-label="Food & Dining share"><span style="width:38%"></span></div></li><li class="list-item" style="display:block"><div class="budget-top"><span>2. Housing</span><span>Rs. 8,983.00</span></div><div class="progress" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" aria-label="Housing share"><span style="width:26%"></span></div></li><li class="list-item" style="display:block"><div class="budget-top"><span>3. Transport</span><span>Rs. 4,837.00</span></div><div class="progress" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" aria-label="Transport share"><span style="width:14%"></span></div></li><li class="list-item" style="display:block"><div class="budget-top"><span>4. Education</span><span>Rs. 4,146.00</span></div><div class="progress" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" aria-label="Education share"><span style="width:12%"></span></div></li><li class="list-item" style="display:block"><div class="budget-top"><span>5. Utility Bills</span><span>Rs. 3,455.00</span></div><div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Utility Bills share"><span style="width:10%"></span></div></li></ul></article>
+</section>
+<section class="card"><div class="card-head"><h2>Spending Insights</h2></div>
+<ul class="list"><li class="list-item"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Food &amp; Dining is your highest spending category (38% of expenses).</li>
+<li class="list-item"><i class="fa-solid fa-percent" aria-hidden="true"></i> Your expenses were 28% of your income this month.</li>
+<li class="list-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Housing &amp; Utilities has reached 100% of its budget.</li></ul></section>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>
