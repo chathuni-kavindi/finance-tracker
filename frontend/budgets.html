@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgets | Clarity Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body data-page="budgets" data-title="Budgets">
+<main class="content" id="main">
+
+<div class="page-header"><div><h1>Budgets</h1><p class="muted">Set monthly limits and track your spending.</p></div>
+<div class="actions"><span class="chip chip-muted"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Sample preview data</span><label class="sr-only" for="b-month">Month</label><select id="b-month" style="width:auto"><option>Oct 2026</option><option>Sep 2026</option></select>
+<button class="btn btn-primary" data-open="budget-dialog" data-title="Add budget"><i class="fa-solid fa-plus" aria-hidden="true"></i> Add Budget</button></div></div>
+<section class="grid grid-3">
+<article class="card stat"><span class="icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span><p class="label">Total Monthly Budget</p><p class="value">Rs. 47,000.00</p></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span><p class="label">Total Spent</p><p class="value">Rs. 34,200.00</p></article>
+<article class="card stat"><span class="icon"><i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></span><p class="label">Remaining</p><p class="value">Rs. 12,800.00</p><span class="chip chip-income"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> On track</span></article>
+</section>
+<div class="alert alert-warning" role="alert"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i><span><strong>Heads up:</strong> Housing &amp; Utilities is over its limit and Food &amp; Dining is close to its limit.</span></div>
+<section class="grid grid-2">
+<article class="card"><div class="budget-item" data-removable data-name="Food &amp; Dining">
+<div class="budget-top"><span><i class="fa-solid fa-utensils" aria-hidden="true"></i> Food & Dining</span><span class="chip chip-warning"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Warning</span><div class="right"><button class="icon-btn" data-open="budget-dialog" data-title="Edit budget" data-fill="{&quot;category&quot;: &quot;Food&quot;, &quot;limit&quot;: 15000}" aria-label="Edit Food &amp; Dining budget"><i class="fa-solid fa-pen" aria-hidden="true"></i></button><button class="icon-btn" data-delete="budget" aria-label="Delete Food &amp; Dining budget"><i class="fa-solid fa-trash" aria-hidden="true"></i></button></div></div>
+<div class="progress warn" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Food &amp; Dining budget used"><span style="width:80%"></span></div>
+<div class="budget-meta"><span>Rs. 12,000.00 spent (80%)</span><span>Limit: Rs. 15,000.00</span></div></div></article><article class="card"><div class="budget-item" data-removable data-name="Transportation">
+<div class="budget-top"><span><i class="fa-solid fa-car" aria-hidden="true"></i> Transportation</span><span class="chip chip-income"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Safe</span><div class="right"><button class="icon-btn" data-open="budget-dialog" data-title="Edit budget" data-fill="{&quot;category&quot;: &quot;Transport&quot;, &quot;limit&quot;: 6000}" aria-label="Edit Transportation budget"><i class="fa-solid fa-pen" aria-hidden="true"></i></button><button class="icon-btn" data-delete="budget" aria-label="Delete Transportation budget"><i class="fa-solid fa-trash" aria-hidden="true"></i></button></div></div>
+<div class="progress " role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Transportation budget used"><span style="width:70%"></span></div>
+<div class="budget-meta"><span>Rs. 4,200.00 spent (70%)</span><span>Limit: Rs. 6,000.00</span></div></div></article><article class="card"><div class="budget-item" data-removable data-name="Housing &amp; Utilities">
+<div class="budget-top"><span><i class="fa-solid fa-house" aria-hidden="true"></i> Housing & Utilities</span><span class="chip chip-expense"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Over limit</span><div class="right"><button class="icon-btn" data-open="budget-dialog" data-title="Edit budget" data-fill="{&quot;category&quot;: &quot;Housing&quot;, &quot;limit&quot;: 18000}" aria-label="Edit Housing &amp; Utilities budget"><i class="fa-solid fa-pen" aria-hidden="true"></i></button><button class="icon-btn" data-delete="budget" aria-label="Delete Housing &amp; Utilities budget"><i class="fa-solid fa-trash" aria-hidden="true"></i></button></div></div>
+<div class="progress over" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Housing &amp; Utilities budget used"><span style="width:100%"></span></div>
+<div class="budget-meta"><span>Rs. 18,000.00 spent (100%)</span><span>Limit: Rs. 18,000.00</span></div></div></article><article class="card"><div class="budget-item" data-removable data-name="Education">
+<div class="budget-top"><span><i class="fa-solid fa-book" aria-hidden="true"></i> Education</span><span class="chip chip-income"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Safe</span><div class="right"><button class="icon-btn" data-open="budget-dialog" data-title="Edit budget" data-fill="{&quot;category&quot;: &quot;Education&quot;, &quot;limit&quot;: 8000}" aria-label="Edit Education budget"><i class="fa-solid fa-pen" aria-hidden="true"></i></button><button class="icon-btn" data-delete="budget" aria-label="Delete Education budget"><i class="fa-solid fa-trash" aria-hidden="true"></i></button></div></div>
+<div class="progress " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Education budget used"><span style="width:0%"></span></div>
+<div class="budget-meta"><span>Rs. 0.00 spent (0%)</span><span>Limit: Rs. 8,000.00</span></div></div></article>
+</section>
+<dialog id="budget-dialog" aria-labelledby="budget-dialog-title">
+<form data-demo data-success="Budget saved." novalidate>
+<div class="modal-head"><h2 id="budget-dialog-title">Add budget</h2><button type="button" class="icon-btn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+<div class="modal-body"><div class="field"><label for="b-category">Category <span class="req" aria-hidden="true">*</span></label><select id="b-category" name="category" required data-error="Please select a category."><option value="">Select a category</option><option value="Food">Food</option><option value="Transport">Transport</option><option value="Education">Education</option><option value="Housing">Housing</option><option value="Bills">Bills</option><option value="Healthcare">Healthcare</option><option value="Shopping">Shopping</option><option value="Entertainment">Entertainment</option><option value="Other">Other</option></select><p class="error-text" role="alert"></p></div><div class="field"><label for="b-limit">Monthly limit (Rs.) <span class="req" aria-hidden="true">*</span></label><input id="b-limit" name="limit" type="number" required data-error="Budget amount must be greater than zero." data-positive step="0.01"><p class="error-text" role="alert"></p></div><div class="field"><label for="b-period">Budget period <span class="req" aria-hidden="true">*</span></label><input id="b-period" name="period" type="month" required data-error="Please choose a month."><p class="error-text" role="alert"></p></div><div class="field"><label for="b-notes">Notes (optional)</label><textarea id="b-notes" name="notes" rows="3"></textarea><p class="error-text" role="alert"></p></div></div>
+<div class="modal-foot"><button type="button" class="btn btn-outline" data-close>Cancel</button><button type="submit" class="btn btn-primary">Save budget</button></div>
+</form></dialog>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>
