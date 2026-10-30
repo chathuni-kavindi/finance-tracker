@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Clarity Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body data-page="settings" data-title="Settings">
+<main class="content" id="main">
+
+<div class="page-header"><div><h1>Settings</h1><p class="muted">Manage your profile, preferences and security.</p></div></div>
+<section class="grid grid-2">
+<article class="card"><div class="card-head"><h2>Profile</h2></div>
+<form data-demo data-success="Profile updated." novalidate><div class="field"><label for="s-name">Full name <span class="req" aria-hidden="true">*</span></label><input id="s-name" name="name" type="text" required data-error="Please enter your name." value="Alex Perera"><p class="error-text" role="alert"></p></div><div class="field"><label for="s-email">Email address <span class="req" aria-hidden="true">*</span></label><input id="s-email" name="email" type="email" required data-error="Please enter your email." value="alex@example.com"><p class="error-text" role="alert"></p></div><button class="btn btn-primary" type="submit">Update profile</button></form></article>
+<article class="card"><div class="card-head"><h2>Preferences</h2></div>
+<form data-demo data-success="Preferences saved." novalidate><div class="field"><label for="s-currency">Currency</label><select id="s-currency" name="currency"><option>LKR (Rs.)</option><option>USD ($)</option></select><p class="error-text" role="alert"></p></div><div class="field"><label for="s-date">Date format</label><select id="s-date" name="dateformat"><option>YYYY-MM-DD</option><option>DD/MM/YYYY</option><option>MM/DD/YYYY</option></select><p class="error-text" role="alert"></p></div><div class="field"><label for="s-period">Default dashboard period</label><select id="s-period" name="period"><option>This month</option><option>Last 3 months</option><option>This year</option></select><p class="error-text" role="alert"></p></div>
+<div class="field"><span class="label" id="theme-label">Theme</span><div class="segmented three" role="radiogroup" aria-labelledby="theme-label">
+<input type="radio" name="theme" id="t-light" value="light"><label for="t-light"><i class="fa-solid fa-sun" aria-hidden="true"></i> Light</label>
+<input type="radio" name="theme" id="t-dark" value="dark"><label for="t-dark"><i class="fa-solid fa-moon" aria-hidden="true"></i> Dark</label>
+<input type="radio" name="theme" id="t-system" value="system"><label for="t-system"><i class="fa-solid fa-desktop" aria-hidden="true"></i> System</label></div>
+<p class="hint">Theme changes apply immediately.</p></div>
+<button class="btn btn-primary" type="submit">Save preferences</button></form></article>
+</section>
+<section class="grid grid-2">
+<article class="card"><div class="card-head"><h2>Security</h2></div>
+<form data-demo data-success="Password changed." novalidate><div class="field"><label for="s-current">Current password <span class="req" aria-hidden="true">*</span></label><div class="password-wrap"><input id="s-current" name="current" type="password" required data-error="Enter your current password."><button type="button" class="eye" data-toggle-password aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div><p class="error-text" role="alert"></p></div><div class="field"><label for="s-new">New password <span class="req" aria-hidden="true">*</span></label><div class="password-wrap"><input id="s-new" name="new" type="password" required data-error="Enter a new password." minlength="8" autocomplete="new-password"><button type="button" class="eye" data-toggle-password aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div><p class="error-text" role="alert"></p></div><div class="field"><label for="s-confirm">Confirm new password <span class="req" aria-hidden="true">*</span></label><div class="password-wrap"><input id="s-confirm" name="confirm" type="password" required data-error="Confirm your new password." data-match="#s-new"><button type="button" class="eye" data-toggle-password aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div><p class="error-text" role="alert"></p></div><button class="btn btn-primary" type="submit">Change password</button></form>
+<hr style="border:0;border-top:1px solid var(--border);margin:20px 0">
+<button class="btn btn-outline" data-logout><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Log out</button></article>
+<article class="card danger-zone"><div class="card-head"><h2>Danger zone</h2></div>
+<p class="muted" style="margin-bottom:16px">Deleting your account permanently removes all your transactions, budgets and categories.</p>
+<button class="btn btn-danger" data-open="delete-account-dialog"><i class="fa-solid fa-trash" aria-hidden="true"></i> Delete account</button></article>
+</section>
+<dialog id="delete-account-dialog" aria-labelledby="delete-account-dialog-title">
+<form data-demo data-success="Demo only: nothing was deleted." novalidate>
+<div class="modal-head"><h2 id="delete-account-dialog-title">Delete your account?</h2><button type="button" class="icon-btn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+<div class="modal-body"><p class="muted" style="margin-bottom:16px">This cannot be undone. Type <strong>DELETE</strong> to confirm.</p><div class="field"><label for="s-confirm-delete">Confirmation <span class="req" aria-hidden="true">*</span></label><input id="s-confirm-delete" name="confirmation" type="text" required data-error="Type DELETE to confirm." data-equals="DELETE" autocomplete="off"><p class="error-text" role="alert"></p></div></div>
+<div class="modal-foot"><button type="button" class="btn btn-outline" data-close>Cancel</button><button type="submit" class="btn btn-danger">Delete my account</button></div>
+</form></dialog>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>
